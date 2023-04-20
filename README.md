@@ -20,6 +20,7 @@ The http server listens on port 8080 and access to the routes is done by authent
 #  Routes
 ## Welcome
 Request : curl -i http://localhost:8080/
+
 Response :
 ```
 HTTP/1.1 200 OK
@@ -190,10 +191,11 @@ Content-Length: 1746
 	{
 		"id": 1,
 		"name": "welsh traditionnel",
-		"description": "….
+		"description": "…",
+		"Ingredient": [...
 ```
 
-### 2.8	Flag / Unflag favorirte recipes
+### 2.8	Flag / Unflag favorite recipes
 => Flag
 
 Request : curl -i -H "Content-Type: application/json"
@@ -252,7 +254,7 @@ go test -timeout 30s -run ^TestIngredientCreateUnit$ academy.go/welsh
 ```
 
 ### Test integration
-The test allows for end-to-end testing of the Create Ingredient feature:
+The test allows for end-to-end testing of the Create Ingredient function :
 ```
 go test -timeout 30s -run ^TestIngredientCreateIntregation$ academy.go/welsh
 ```
